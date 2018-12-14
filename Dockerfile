@@ -9,6 +9,7 @@ RUN apt-get update -y && apt-get install git python-tornado -y && \
     mv angular-filemanager/dist ng-filemanager/ && \
     mv angular-filemanager/node_modules ng-filemanager/ && \
     mv angular-filemanager/bridges/python/tornado ng-filemanager/bridges/python/ && \
+    rm -rf angular-filemanager && \
     apt-get remove -y git && apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
